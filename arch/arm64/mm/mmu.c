@@ -864,7 +864,6 @@ int pud_set_huge(pud_t *pudp, phys_addr_t phys, pgprot_t prot)
 int pmd_set_huge(pmd_t *pmdp, phys_addr_t phys, pgprot_t prot)
 {
 	pgprot_t sect_prot = __pgprot(PMD_TYPE_SECT |
-
 					pgprot_val(mk_sect_prot(prot)));
 	pmd_t new_pmd = pfn_pmd(__phys_to_pfn(phys), sect_prot);
 
@@ -877,7 +876,6 @@ int pmd_set_huge(pmd_t *pmdp, phys_addr_t phys, pgprot_t prot)
 	set_pmd(pmdp, new_pmd);
 	return 1;
 }
-
 
 int pud_clear_huge(pud_t *pud)
 {
