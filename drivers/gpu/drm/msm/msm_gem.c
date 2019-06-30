@@ -111,7 +111,7 @@ static struct page **get_pages(struct drm_gem_object *obj)
 		}
 
 		/*
-		 * Make sure to flush the CPU cache for newly allocated memory
+	     * Make sure to flush the CPU cache for newly allocated memory
 		 * so we don't get ourselves into trouble with a dirty cache
 		 */
 		if (msm_obj->flags & (MSM_BO_WC|MSM_BO_UNCACHED))
