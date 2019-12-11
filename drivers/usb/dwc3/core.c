@@ -1086,7 +1086,7 @@ int dwc3_core_pre_init(struct dwc3 *dwc)
 	if (!dwc->ev_buf) {
 		ret = dwc3_alloc_event_buffers(dwc, DWC3_EVENT_BUFFERS_SIZE);
 		if (ret) {
-			dev_err(dwc->dev, "failed to allocate event buffers\n");
+	dev_err(dwc->dev, "failed to allocate event buffers\n");
 			ret = -ENOMEM;
 		}
 	}
