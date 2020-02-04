@@ -988,7 +988,7 @@ static int set_config(struct usb_composite_dev *cdev,
 					__func__, tmp, f->name);
 			cdev->delayed_status++;
 			DBG(cdev, "delayed_status count %d\n",
-				cdev->delayed_status);
+					cdev->delayed_status);
 		}
 	}
 
